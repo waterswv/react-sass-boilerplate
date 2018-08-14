@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Toolbar from './Toolbar/Toolbar';
+import SideDrawer from './SideDrawer/SideDrawer';
+import Backdrop from './Backdrop/Backdrop';
+
 const google = window.google;
-const apiKey = 'AIzaSyDV5HMbW_2loRPhf5xa0IzXP5SfOP1TF-Q';
 
 
 class App extends Component {
-
-
+  state = {
+    sideDrawerOpen: false
+  }
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  }
+  drawerToggleClickHandler = () => {
+    this.setState( (prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    })
+  }
   addMarker = () => {
     this.marker = new window.google.maps.Marker({position: {lat: 38.6640092,
     lng: -122.9342897}, map: this.map})
@@ -20,13 +31,16 @@ class App extends Component {
         });}
   }
   render() {
-
+    let sideDrawer
+    let backdrop
+    if(this.state.sideDrawerOpen){
+      backdrop = <Backdrop click={this.backdropClickHandler}/>
+    }
     return (
       <div className="App">
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-        </header>
+        <Toolbar drawerToggleClickHandler={this.drawerToggleClickHandler}/>
+        <SideDrawer show={this.state.sideDrawerOpen} />        
+        {backdrop}
         <div className="wrapper">
           <div className="row">
             <div className="column-6 column-s-12">I Should be 6 columns on the Left</div>

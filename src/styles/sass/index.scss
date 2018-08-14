@@ -1,2 +1,13 @@
 @import './base/grid';
 @import './components/App';
+@import './components/Toolbar';
+@import './components/SideDrawer';
+@import './components/SideDrawerToggleButton';
+@import './components/Backdrop';
+
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
