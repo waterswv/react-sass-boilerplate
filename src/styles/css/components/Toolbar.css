@@ -4,7 +4,8 @@
   left: 0;
   width: 100%;
   background: #7B68EE;
-  height: 56px; }
+  height: 56px;
+  z-index: 100; }
 
 .toolbar__navigation {
   display: flex;
@@ -31,10 +32,7 @@
 .toolbar__navigation-items a {
   color: white;
   text-decoration: none; }
-.toolbar__navigation-items a:hover {
-  color: orange;
-  text-decoration: none; }
-.toolbar__navigation-items a:active {
+.toolbar__navigation-items a:hover, .toolbar__navigation-items a:active {
   color: orange;
   text-decoration: none; }
 
