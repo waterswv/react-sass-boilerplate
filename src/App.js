@@ -20,7 +20,6 @@ class App extends Component {
         });}
   }
   render() {
-    console.log('what is google', google )
 
     return (
       <div className="App">
@@ -30,13 +29,13 @@ class App extends Component {
         </header>
         <div className="wrapper">
           <div className="row">
-            <div className="column-6">I Should be 6 columns on the Left</div>
-            <div className="column-6">I should be 6 columns on the Right</div>
+            <div className="column-6 column-s-12">I Should be 6 columns on the Left</div>
+            <div className="column-6 column-s-12">I should be 6 columns on the Right</div>
           </div>
         </div>
         <div className="wrapper">
           <div className="row">
-          <div className="column-6">
+          <div className="column-6 column-s-12">
               <div className="row">
                 <div className="column-12">
                   <button onClick={this.addMarker}>Add Marker</button>
@@ -44,7 +43,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div className="column-6">
+          <div className="column-6 column-s-12">
             Bottom Right 6 Columns
          </div>
        </div>

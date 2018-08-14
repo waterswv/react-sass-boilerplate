@@ -39,3 +39,14 @@ img {
             }
         }
     }
+    @media #{$breakpoint-small} {
+        .wrapper {
+            width: 95%;
+            max-width: $grid-max-width;
+            }
+        @for $i from 1 through $grid-columns {
+            .column-s-#{$i} {
+                width: 100% / $grid-columns * $i;
+                }
+            }
+        }
