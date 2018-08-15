@@ -30,25 +30,33 @@
   flex: 1;
 }
 .toolbar__navigation-items {
+  height: 100%;
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-  }
-  li {
-    padding: 0 0.5rem;
-  }
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  a:hover, a:active {
-    color: orange;
-    text-decoration: none;
+    height: 100%;
+    li {
+      padding: 0 0.5rem;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      a:hover, a:active {
+        color: orange;
+        text-decoration: none;
+      }
+    }
   }
 }
-
+.item-text{
+  margin-top: 1.30rem;
+}
+.active{
+  background-color: blue;
+}
 @media (max-width: 768px){
 .toolbar__navigation-items{
     display: none;
