@@ -1,5 +1,6 @@
 import React from 'react';
 import SideDrawerToggleButton from '../SideDrawer/SideDrawerToggleButton';
+import Select from '../Select/Select';
 
 const Toolbar = props => (
   <header className="toolbar">
@@ -10,9 +11,15 @@ const Toolbar = props => (
         <div className="toolbar__navigation-items" >
           <ul>
             <li className="active"><a href="/"><div className="item-text">Things about Wine</div></a></li>
+            <li><Select options={[
+  { name: 'option1', value: '1' },
+  { name: 'option2', value: '2' },
+  { name: 'option3', value: '3' },
+]} /></li>
             <li><a href="/"><div className="item-text">Level Up</div></a></li>
             <li><a href="/"><div className="item-text">Blog</div></a></li>
             <li><a href="/"><div className="item-text">P</div></a></li>
+
           </ul>
         </div>
     </nav>
