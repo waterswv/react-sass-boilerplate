@@ -2,9 +2,33 @@ import React, { Component } from "react";
 import Toolbar from "./Toolbar/Toolbar";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import Backdrop from "./Backdrop/Backdrop";
+import Container from './Container';
+import AddMarker from './MapComponents/AddMarker';
 
 const google = window.google;
-
+const wineries = [
+  {
+    name: 'Unti',
+    position: {
+      lat: 38.6640092,
+      lng: -122.9342897
+      }
+  },
+  {
+    name: 'Roth',
+    position: {
+      lat: 38.5706633,
+      lng: -122.7795547
+    }
+  },
+  {
+    name: 'Bella',
+    position: {
+      lat: 38.7056274,
+      lng: -122.9804787
+    }
+  }
+]
 class App extends Component {
   state = {
     sideDrawerOpen: false
@@ -17,13 +41,11 @@ class App extends Component {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
-  addMarker = () => {
+  addMarker = (data) => {
     this.marker = new window.google.maps.Marker({
-      position: {
-        lat: 38.6640092,
-        lng: -122.9342897
-      },
-      map: this.map
+      position: data.position,
+      map: this.map,
+      title: data.name
     });
   };
   componentDidMount() {
@@ -47,29 +69,20 @@ class App extends Component {
         <Toolbar drawerToggleClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <div className="wrapper">
-          <div className="row">
-            <div className="column-6 column-s-12">
-              I Should be 6 columns on the Left
-            </div>
-            <div className="column-6 column-s-12">
-              I should be 6 columns on the Right
+        <Container className={"main-search wrapper"}>
+          {  /* Explore Taste Searches go here... */ }
+        </Container>
+        <Container className={"secondary-search wrapper"}>
+          {  /* Regional Searches go here... */ }
+        </Container>
+        <Container className={"wrapper"}>
+          <div className="column-6 column-s-12">
+            <div className="column-12 map-container">
+              {wineries.map(winery => <AddMarker winery={winery} click={() => this.addMarker(winery)} />)}
+              <div ref="map" className="map" />
             </div>
           </div>
-        </div>
-        <div className="wrapper">
-          <div className="row">
-            <div className="column-6 column-s-12">
-              <div className="row">
-                <div className="column-12 map-container">
-                  <button onClick={this.addMarker}>Add Marker</button>
-                  <div ref="map" className="map" />
-                </div>
-              </div>
-            </div>
-            <div className="column-6 column-s-12">Bottom Right 6 Columns</div>
-          </div>
-        </div>
+        </Container>
       </div>
     );
   }

@@ -299,6 +299,26 @@ img {
     .options__option:hover {
       background: #ccc; }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.button {
+  padding: 8px 16px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: #ccc; }
+
+.button-primary {
+  background-color: slategrey;
+  color: #fff; }
+
+.button-primary:hover {
+  background: lightslategrey;
+  cursor: pointer; }
+
 html {
   height: 100%; }
 
