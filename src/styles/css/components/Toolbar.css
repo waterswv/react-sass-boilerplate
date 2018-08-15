@@ -35,15 +35,14 @@
       .toolbar__navigation-items ul li a {
         color: white;
         text-decoration: none; }
+        .toolbar__navigation-items ul li a .item-text {
+          margin-top: 1.30rem; }
       .toolbar__navigation-items ul li a:hover, .toolbar__navigation-items ul li a:active {
         color: orange;
         text-decoration: none; }
 
-.item-text {
-  margin-top: 1.30rem; }
-
 .active {
-  background-color: blue; }
+  background-color: #4E39C8; }
 
 @media (max-width: 768px) {
   .toolbar__navigation-items {

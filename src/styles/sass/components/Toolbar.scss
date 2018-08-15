@@ -42,6 +42,9 @@
       a {
         color: white;
         text-decoration: none;
+        .item-text{
+          margin-top: 1.30rem;
+        }
       }
 
       a:hover, a:active {
@@ -51,11 +54,9 @@
     }
   }
 }
-.item-text{
-  margin-top: 1.30rem;
-}
+
 .active{
-  background-color: blue;
+  background-color: #4E39C8;
 }
 @media (max-width: 768px){
 .toolbar__navigation-items{
