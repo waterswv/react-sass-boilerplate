@@ -4,10 +4,14 @@
 @import './components/SideDrawer';
 @import './components/SideDrawerToggleButton';
 @import './components/Backdrop';
+@import './components/Select';
+@import './components/SelectButton';
+@import './components/Options';
 
 html{
   height: 100%;
 }
 body{
   height: 100%;
+  font-family: 'Raleway', sans-serif;
 }

@@ -1,0 +1,83 @@
+/*
+Error: Undefined variable: "$primary-brand".
+        on line 11 of src/styles/sass/components/Select.scss
+
+6:   height: 100%;
+7:   font-size: 14px;
+8:   position: relative;
+9:   input {
+10:     max-width: 100px;
+11:     background: $primary-brand;
+12:     color: white;
+13:     font-family: 'Raleway', sans-serif !important;
+14:     font-size: 16px !important;
+15:     border: none;
+16:     flex: 1;
+
+Backtrace:
+src/styles/sass/components/Select.scss:11
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Users/bryanmierke-macbookair/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$primary-brand\".\A         on line 11 of src/styles/sass/components/Select.scss\A \A 6:   height: 100%;\A 7:   font-size: 14px;\A 8:   position: relative;\A 9:   input {\A 10:     max-width: 100px;\A 11:     background: $primary-brand;\A 12:     color: white;\A 13:     font-family: 'Raleway', sans-serif !important;\A 14:     font-size: 16px !important;\A 15:     border: none;\A 16:     flex: 1;"; }

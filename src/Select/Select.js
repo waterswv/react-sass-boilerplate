@@ -6,7 +6,7 @@ export default class SelectInput extends React.Component {
 
   state = {
     options: this.props.options,
-    value: '',
+    value: 'Level Up',
     dropDown: false,
     mouseDown: false,
   };
@@ -46,12 +46,8 @@ export default class SelectInput extends React.Component {
       <div className="select">
         <input
           type="text"
-          placeholder="Topic"
           value={value}
           onMouseDown={this.onInputMouseDown}
-        />
-        <SelectButton
-          onInputMouseDown={this.onInputMouseDown}
         />
         {
           dropDown &&
