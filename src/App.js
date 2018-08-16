@@ -44,9 +44,13 @@ const wineries = [
   }
 ]
 class App extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
+  constructor(props){
+    super(props)
+    this.state = {
+      sideDrawerOpen: false,
+      isLoading: false,
+    }
+  }
   backdropClickHandler = () => {
     this.setState({ sideDrawerOpen: false });
   };
@@ -55,15 +59,37 @@ class App extends Component {
       return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
-  addMarker = (data) => {
+   addMarker = (data) => {
+
     this.marker = new window.google.maps.Marker({
       position: data.position,
       map: this.map,
       title: data.name
     });
+    this.addDirectionsDisplay(data.position)
   };
+  addDirectionsDisplay = (end) => {
+    this.setState( state => state.isLoading = true)
+    this.directionsService.route({
+         origin: {
+           lat: 38.6640092,
+           lng: -122.9342897
+         },
+         destination: end,
+         travelMode: 'DRIVING'
+       }, (response, status) => {
+         if (status === 'OK') {
+           this.directionsDisplay.setDirections(response);
+           this.setState( state => state.isLoading = false)
+         } else {
+           window.alert('Directions request failed due to ' + status);
+         }
+       })
+  }
   componentDidMount() {
     if (google) {
+      this.directionsDisplay = new window.google.maps.DirectionsRenderer;
+      this.directionsService = new window.google.maps.DirectionsService;
       this.map = new window.google.maps.Map(this.refs.map, {
         center: {
           lat: 38.6640092,
@@ -72,10 +98,13 @@ class App extends Component {
         zoom: 9,
         disableDefaultUI: true,
       });
+      this.directionsDisplay.setMap(this.map);
+      this.directionsDisplay.setPanel(this.refs.directions)
     }
   }
   render() {
     let backdrop;
+    const {isLoading} = this.state;
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
@@ -86,15 +115,23 @@ class App extends Component {
         {backdrop}
         <Container className={"main-search wrapper"}>
           {  /* Explore Taste Searches go here... */ }
+          <a>Explore</a><a>Taste</a>
         </Container>
         <Container className={"column-12 wrapper"}>
           {  /* Regional Searches go here... */ }
+          <div>Wineries:</div>
+          <div className="column-12 map-container">
+            {wineries.map(winery => <AddMarker winery={winery} click={() => this.addMarker(winery)} />)}
+          </div>
         </Container>
         <Container className={"wrapper column-12"}>
             <div className="column-12 map-container">
-              {wineries.map(winery => <AddMarker winery={winery} click={() => this.addMarker(winery)} />)}
+              {isLoading ? <Backdrop /> : null}
               <div ref="map" className="map" />
             </div>
+        </Container>
+        <Container className={"wrapper column-12 map"}>
+          <div ref="directions"></div>
         </Container>
       </div>
     );
