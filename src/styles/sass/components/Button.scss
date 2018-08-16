@@ -1,15 +1,23 @@
+@import "../abstracts/variables";
+
 .button {
-  padding: 8px 16px;
+  padding: 10px 18px;
   display: inline-block;
   text-decoration: none;
   border-radius: 3px;
-  background-color: #ccc
+  background-color: #ccc;
+  border: 0;
+  margin: 5px;
+  font-size: 1rem;
 }
 .button-primary {
-  background-color: slategrey;
+  background-color: #1E90FF;
   color: #fff
 }
 .button-primary:hover {
-  background: lightslategrey;
+  background-color: darken(#1E90FF, 20%);
   cursor: pointer;
 }
+
+//TODO: Fix the width of each button so the sizes are the same ...
+// TODO: Wrap next line left to right, not

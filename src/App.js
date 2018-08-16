@@ -27,6 +27,20 @@ const wineries = [
       lat: 38.7056274,
       lng: -122.9804787
     }
+  },
+  {
+    name: 'Comstock',
+    position: {
+      lat: 38.6326374,
+      lng: -122.8973365
+    }
+  },
+  {
+    name: 'Fog Crest',
+    position: {
+      lat: 38.4286098,
+      lng: -122.8444916
+    }
   }
 ]
 class App extends Component {
@@ -55,7 +69,8 @@ class App extends Component {
           lat: 38.6640092,
           lng: -122.9342897
         },
-        zoom: 10
+        zoom: 9,
+        disableDefaultUI: true,
       });
     }
   }
@@ -72,16 +87,14 @@ class App extends Component {
         <Container className={"main-search wrapper"}>
           {  /* Explore Taste Searches go here... */ }
         </Container>
-        <Container className={"secondary-search wrapper"}>
+        <Container className={"column-12 wrapper"}>
           {  /* Regional Searches go here... */ }
         </Container>
-        <Container className={"wrapper"}>
-          <div className="column-6 column-s-12">
+        <Container className={"wrapper column-12"}>
             <div className="column-12 map-container">
               {wineries.map(winery => <AddMarker winery={winery} click={() => this.addMarker(winery)} />)}
               <div ref="map" className="map" />
             </div>
-          </div>
         </Container>
       </div>
     );
